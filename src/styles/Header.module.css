@@ -1,0 +1,74 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  background: #000000;
+  color: #fff;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+
+.logoImage {
+  width: 7rem;
+  height: auto;
+  object-fit: contain;
+}
+
+.logoText {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.menuButton {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: none;
+}
+
+.nav {
+  display: flex;
+  gap: 1rem;
+  margin-right: 3.5rem;
+}
+
+.nav a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.open {
+  display: block;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .menuButton {
+    display: block;
+  }
+  .nav {
+    display: none;
+    flex-direction: column;
+    background: #222;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 200px;
+    padding: 1rem;
+  }
+  .nav.open {
+    display: flex;
+  }
+}
