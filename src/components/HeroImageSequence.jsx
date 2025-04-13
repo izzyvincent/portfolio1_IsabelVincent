@@ -46,11 +46,11 @@ export default function HeroImageSequence() {
                 end: "bottom top",
                 scrub: true,
                 pin: true,
-                // markers: true,
+                //markers: true,
             },
             onUpdate: () => {
-                const frame = imgSeq.frame;
-                const image = loadedImages[frame];
+                const frameIndex = Math.round(imgSeq.frame);
+                const image = loadedImages[frameIndex];
                 if (image) {
                     context.clearRect(0, 0, canvas.width, canvas.height);
                     context.drawImage(image, 0, 0, canvas.width, canvas.height);
@@ -59,5 +59,12 @@ export default function HeroImageSequence() {
         });
     }, []); 
 
-    return <canvas ref={canvasRef} data-cursor="scroll" className={styles.canvas} style={{ width: '100%', height: 'auto' }} />;
-    }
+    return (
+        <canvas 
+            ref={canvasRef} 
+            data-cursor="scroll" 
+            className={`${styles.canvas} ${styles.heroCanvas}`} 
+            style={{ width: '100%', height: '60vh'}}
+        />
+    );
+}

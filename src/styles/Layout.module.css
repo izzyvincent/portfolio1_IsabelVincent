@@ -6,6 +6,6 @@
 
 .mainContent {
   flex: 1;
-  margin-top: 60px; /* Adjust if header is fixed */
-  padding: 1rem;
+  margin: 0;
+  width: 100%;
 }
