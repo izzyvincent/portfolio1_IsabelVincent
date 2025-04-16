@@ -4,7 +4,7 @@
 
 import { useRef, useState } from "react";
 import { motion, useMotionValue, useSpring } from "framer-motion";
-import "./TiltedCard.css";
+import styles from "./TiltedCard.module.css";
 
 const springValues = {
   damping: 30,
@@ -80,7 +80,7 @@ export default function TiltedCard({
   return (
     <figure
       ref={ref}
-      className="tilted-card-figure"
+      className={styles.tiltedCardFigure}
       style={{
         height: containerHeight,
         width: containerWidth,
@@ -90,13 +90,13 @@ export default function TiltedCard({
       onMouseLeave={handleMouseLeave}
     >
       {showMobileWarning && (
-        <div className="tilted-card-mobile-alert">
+        <div className={styles.tiltedCardMobileAlert}>
           This effect is not optimized for mobile. Check on desktop.
         </div>
       )}
 
       <motion.div
-        className="tilted-card-inner"
+        className={styles.tiltedCardInner}
         style={{
           width: imageWidth,
           height: imageHeight,
@@ -108,7 +108,7 @@ export default function TiltedCard({
         <motion.img
           src={imageSrc}
           alt={altText}
-          className="tilted-card-img"
+          className={styles.tiltedCardImg}
           style={{
             width: imageWidth,
             height: imageHeight,
@@ -116,7 +116,7 @@ export default function TiltedCard({
         />
 
         {displayOverlayContent && overlayContent && (
-          <motion.div className="tilted-card-overlay">
+          <motion.div className={styles.tiltedCardOverlay}>
             {overlayContent}
           </motion.div>
         )}
@@ -124,7 +124,7 @@ export default function TiltedCard({
 
       {showTooltip && (
         <motion.figcaption
-          className="tilted-card-caption"
+          className={styles.tiltedCardCaption}
           style={{
             x,
             y,

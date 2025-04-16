@@ -2,7 +2,7 @@
 	Installed from https://reactbits.dev/default/
 */
 
-.tilted-card-figure {
+.tiltedCardFigure {
   position: relative;
   width: 100%;
   height: 100%;
@@ -13,7 +13,7 @@
   justify-content: center;
 }
 
-.tilted-card-mobile-alert {
+.tiltedCardMobileAlert {
   position: absolute;
   top: 1rem;
   text-align: center;
@@ -30,12 +30,12 @@
   }
 }
 
-.tilted-card-inner {
+.tiltedCardInner {
   position: relative;
   transform-style: preserve-3d;
 }
 
-.tilted-card-img {
+.tiltedCardImg {
   position: absolute;
   top: 0;
   left: 0;
@@ -45,7 +45,7 @@
   transform: translateZ(0);
 }
 
-.tilted-card-overlay {
+.tiltedCardOverlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -54,7 +54,7 @@
   transform: translateZ(30px);
 }
 
-.tilted-card-caption {
+.tiltedCardCaption {
   pointer-events: none;
   position: absolute;
   left: 0;
@@ -69,7 +69,7 @@
 }
 
 /* added by Isabel Vincent */
-.tilted-card-text {
+.tiltedCardText {
   text-transform: capitalize;
   color: #fff;
   letter-spacing: -.5px;
