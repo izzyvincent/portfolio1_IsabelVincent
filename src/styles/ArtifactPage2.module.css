@@ -1,0 +1,164 @@
+.projectPage {
+  width: 100%;
+  margin: 0 auto;
+  padding: 1rem;
+  background: #000000;
+  color: #fff;
+  box-sizing: border-box;
+}
+
+.headerSection {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+  margin-bottom: 2rem;
+}
+
+.headerImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.metadata {
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.6);
+  padding: 1rem;
+  border-radius: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.metaItem {
+  display: flex;
+  flex-direction: column;
+  align-items: Left;
+}
+
+.metaLabel {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+
+.metaValue {
+  font-size: 1rem;
+}
+
+.splitSection {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.leftColumn,
+.rightColumn {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.leftColumn h2,
+.rightColumn h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.horzScrollSection {
+  position: relative;
+  display: flex;
+  gap: 2rem;
+  overflow-x: hidden;
+  width: 950vw;
+  margin-bottom: 2rem;
+  justify-content: left;
+
+}
+
+.panel {
+  flex: none;
+  width: 80vw;
+  padding: 1rem;
+  background: #DE9D26;
+  border-radius: 8px;
+  align-content: center;
+}
+
+.panel h2 {
+  font-size: 1.8rem;
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+}
+
+.panel p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+@media (min-width: 768px) {
+  .splitSection {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .projectPage {
+    padding: 2rem;
+  }
+  .horzScrollSection{
+    width: 680vw;
+  }
+  .panel {
+    width: 60vw;
+  }
+  .panel h2 {
+    font-size: 2.2rem;
+  }
+  .panel p {
+    font-size: 1.2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .splitSection {
+    max-width: 960px;
+    margin-left: 13rem;
+  }
+  .horzScrollSection{
+    width: 560vw;
+  }
+  .panel {
+    width: 50vw;
+  }
+  .panel h2 {
+    font-size: 2.4rem;
+  }
+  .panel p {
+    font-size: 1.4rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  .splitSection {
+    max-width: 1200px;
+    margin-left: 20rem;
+  }
+  .horzScrollSection{
+    width: 350vw;
+  }
+  .panel {
+    width: 30vw;
+  }
+  .panel h2 {
+    font-size: 2.5rem;
+  }
+  .panel p {
+    font-size: 1.5rem;
+  }
+}

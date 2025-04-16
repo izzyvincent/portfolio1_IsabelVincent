@@ -1,22 +1,24 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+# Isabel Vincent Portfolio
+
+Hey there! Welcome to my portfolio website – the place where I showcase my projects, share my creative journey, and have a bit of fun with design and code. This site is built with Next.js, GSAP, and Framer Motion to give it some smooth animations and responsive layouts.
+
+## What's Inside
+
+- **Home:** A quick intro to who I am and what I do, with a featured project display.
+- **About:** My story, background in art and design, and how I approach creative challenges.
+- **Artifact Pages:** Detailed case studies for projects like the Period App Redesign, Shanghai Follies Pitch, and Fizzi Sparkling Water Commercial.
+- **Work:** An overview of my featured work – all designed to give you a peek into my process and skills.
+
 ## Getting Started
 
-First, run the development server:
+To run the site locally, make sure you have Node.js installed, then follow these steps:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+1. **Clone the Repo:**
+   ```bash
+   git clone https://github.com/your-username/your-repo.git
+   cd your-repo
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
