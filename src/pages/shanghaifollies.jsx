@@ -69,8 +69,8 @@ return (
         <div className={styles.projectPage}>
             <section className={styles.headerSection} ref={addToRefs}>
                 <img
-                    src="/img/placeholder-image1.jpeg"
-                    alt="Period App Redesign Background"
+                    src="/img/shanghaifollieshome.png"
+                    alt="Shanghai Follies Comic Style Image"
                     className={styles.headerImage}
                 />
                 <div className={styles.metadata}>

@@ -1,13 +1,12 @@
 import { useEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-// import { FiInstagram, FiLinkedin } from "react-icons/fi";
+import { FiInstagram, FiLinkedin } from "react-icons/fi";
 import Layout from '../components/Layout';
 import styles from '../styles/Home.module.css';
 import HeroImageSequence from '../components/HeroImageSequence';
 import TypewriterTitle from '../components/TyperwriterTitle';
-// import TypewriterSkills from '../components/TypewriterSkills';
-import VerticalScroll from '../components/VerticalScroll';
+import TypewriterSkills from '../components/TypewriterSkills';
 import SEO from '../components/SEO';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -129,76 +128,74 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      <VerticalScroll />
-      {/* <section className="vertical-sections">
-        <div className="panel about-panel">
-          <div className={styles.aboutContainer}>
-            <div className={styles.aboutImageWrapper}>
-              <img 
-                src="/img/LinkedinPhoto.png"
-                alt="Isabel Vincent"
-                className={styles.aboutImage}
-              />
-            </div>
-            <div className={styles.aboutContent}>
-              <h2 className={styles.aboutTitle}>Who am I?</h2>
-              <p className={styles.aboutParagraph}>
-              I’m Izzy, a multidisciplinary designer who values clarity, creativity, and connection. I approach each project with intention and adaptability, always focused on creating work that feels human.
-              </p>
-              <div className={styles.aboutSkills}>
-                <strong>Skills:</strong> <TypewriterSkills />
-              </div>
-              <a href='#about.jsx' className={styles.viewMoreBtn} style={{width: '90%'}}>
-                Learn More
-              </a>
-            </div>
+      <section className="vertical-sections">
+          <div className="panel about-panel" id="panel">
+              <div className={styles.aboutContainer}>
+                  <div className={styles.aboutImageWrapper}>
+                      <img 
+                          src="/img/LinkedinPhoto.png"
+                          alt="Isabel Vincent"
+                          className={styles.aboutImage}
+                      />
+                  </div>
+                  <div className={styles.aboutContent}>
+                      <h2 className={styles.aboutTitle}>Who am I?</h2>
+                      <p className={styles.aboutParagraph}>
+                          I'm Izzy, a multidisciplinary designer who values clarity, creativity, and connection. I approach each project with intention and adaptability, always focused on creating work that feels human.
+                      </p>
+                      <div className={styles.aboutSkills}>
+                          <strong>Skills:</strong> <TypewriterSkills />
+                      </div>
+                      <a href='/about' className={styles.viewMoreBtn} style={{width: '90%'}}>
+                          Learn More
+                      </a>
+                  </div>
           </div>
-        </div>
-        <div className="panel contact-panel">
-          <div className={styles.contactContainer}>
-            <div className={styles.contactInfo}>
-              <h2 className={styles.contactTitle}>Want to work together?</h2>
-              <p className={styles.contactText}>
-                Shoot me a message if you think we'd make a purrfect team!
-              </p>
-
-              <div className={styles.contactIcons}>
-                <a href='#' className={styles.emailBtn}>
-                  <h3 style={{fontWeight: 500}}>izzyvincentdesign@gmail.com</h3>
-                </a>
-                <a href="https://instagram.com/yourprofile" target="_blank" rel="noreferrer">
-                  <FiInstagram className={styles.contactIcon}/>
-                </a>
-                <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noreferrer">
-                  <FiLinkedin className={styles.contactIcon}/>
-                </a>
-              </div>
-            </div>
-
-            <div className={styles.contactFormWrapper}>
-              <form
-                target='_blank'
-                action="https://formsubmit.co/izzyvincentdesign@gmail.com"
-                method="POST"
-                className={styles.contactForm}
-              >
-                <input type="hidden" name="_subject" value="New form submission!" />
-
-                <input type="text" id="name" name="name" placeholder='Your name...' required/>
-
-                <input type="email" id="email" name="email" placeholder='Your email address...' required/>
-
-                <input type="text" name="_honey" style={{ display: 'none' }}></input>
-
-                <textarea id="message" name="message" rows="5" placeholder='Your message...' required style={{ fontFamily: 'DM sans'}}></textarea>
-
-                <button type="submit" className={styles.submitBtn}>Submit</button>
-              </form>
-            </div>
           </div>
-        </div>
-      </section> */}
+          <div className="panel contact-panel">
+              <div className={styles.contactContainer}>
+                  <div className={styles.contactInfo}>
+                      <h2 className={styles.contactTitle}>Want to work together?</h2>
+                      <p className={styles.contactText}>
+                          Shoot me a message if you think we'd make a purrfect team!
+                      </p>
+
+                      <div className={styles.contactIcons}>
+                          <a className={styles.emailBtn}>
+                              <h3 style={{fontWeight: 500}}>izzyvincentdesign@gmail.com</h3>
+                          </a>
+                          <a href="https://www.instagram.com/izzy.vincentt/?hl=en" target="_blank" rel="noreferrer">
+                              <FiInstagram className={styles.contactIcon}/>
+                          </a>
+                          <a href="https://www.linkedin.com/in/isabel-vincent-374a8642" target="_blank" rel="noreferrer">
+                              <FiLinkedin className={styles.contactIcon}/>
+                          </a>
+                      </div>
+                  </div>
+
+                  <div className={styles.contactFormWrapper}>
+                      <form
+                          target='_blank'
+                          action="https://formsubmit.co/izzyvincentdesign@gmail.com"
+                          method="POST"
+                          className={styles.contactForm}
+                      >
+                          <input type="hidden" name="_subject" value="New form submission!" />
+
+                          <input type="text" id="name" name="name" placeholder='Your name...' required/>
+
+                          <input type="email" id="email" name="email" placeholder='Your email address...' required/>
+
+                          <input type="text" name="_honey" style={{ display: 'none' }}></input>
+
+                          <textarea id="message" name="message" rows="5" placeholder='Your message...' required style={{ fontFamily: 'DM sans'}}></textarea>
+
+                          <button type="submit" className={styles.submitBtn}>Submit</button>
+                      </form>
+                  </div>
+              </div>
+          </div>
+      </section>
     </Layout>
   );
 }
