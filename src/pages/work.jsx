@@ -56,7 +56,7 @@ export default function Work() {
         <Link className={styles.projectBtn} href='/periodredesign'>
           <div className={styles.projectCard} ref={addCardRef}>
             <img
-              src="/img/placeholder-image1.jpeg"
+              src="/img/periodredesignhome.png"
               alt="Period App Redesign"
               className={styles.cardImage}
             />
@@ -93,7 +93,7 @@ export default function Work() {
         <Link className={styles.projectBtn} href='/shanghaifollies'>
           <div className={styles.projectCard} ref={addCardRef}>
             <img
-              src="/img/placeholder-image2.jpeg"
+              src="/img/shanghaifollieshome.png"
               alt="Shanghai Follies Pitch"
               className={styles.cardImage}
             />
@@ -131,7 +131,7 @@ export default function Work() {
         <Link className={styles.projectBtn} href='/fizzi'>
           <div className={styles.projectCard} ref={addCardRef}>
             <img
-              src="/img/placeholder-image3.jpeg"
+              src="/img/fizzihome.png"
               alt="Fizzi Sparkling Water Commercial"
               className={styles.cardImage}
             />

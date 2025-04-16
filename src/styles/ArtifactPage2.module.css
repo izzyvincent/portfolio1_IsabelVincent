@@ -103,6 +103,19 @@
   line-height: 1.6;
 }
 
+.tiltedCardText {
+  text-transform: capitalize;
+  color: #fff;
+  letter-spacing: -.5px;
+  background: #0006;
+  border-radius: 15px;
+  margin: 2em;
+  padding: .5rem 1em;
+  font-family: DM Sans;
+  font-weight: 900;
+  box-shadow: 0 5px 30px #06060659;
+}
+
 @media (min-width: 768px) {
   .splitSection {
     flex-direction: row;

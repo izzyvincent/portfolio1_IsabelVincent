@@ -110,7 +110,7 @@ return (
                     scaleOnHover={1.1}
                     displayOverlayContent={true}
                     overlayContent={
-                        <p className="tilted-card-text">
+                        <p className= {styles.tiltedCardText}>
                           Innovative Visual Effects
                         </p>
                     }                    
@@ -125,7 +125,7 @@ return (
                     scaleOnHover={1.1}
                     displayOverlayContent={true}
                     overlayContent={
-                        <p className="tilted-card-text">
+                        <p className= {styles.tiltedCardText}>
                           3D Integration & Branding
                         </p>
                     }      
@@ -140,7 +140,7 @@ return (
                     scaleOnHover={1.1}
                     displayOverlayContent={true}
                     overlayContent={
-                        <p className="tilted-card-text">
+                        <p className= {styles.tiltedCardText}>
                           Creative Post-Production
                         </p>
                     }      
@@ -149,7 +149,7 @@ return (
                 <div className={styles.rightColumn}>
                     <h2>Challenges</h2>
                     <TiltedCard
-                    imageSrc="/img/blue.png"
+                    imageSrc="/img/red.png"
                     captionText="Challenge"
                     containerWidth="300px"
                     containerHeight="300px"
@@ -158,13 +158,13 @@ return (
                     scaleOnHover={1.1}
                     displayOverlayContent={true}
                     overlayContent={
-                        <p className="tilted-card-text">
+                        <p className= {styles.tiltedCardText}>
                           Maintaining Visual Consistency
                         </p>
                     }      
                     />
                     <TiltedCard
-                    imageSrc="/img/blue.png"
+                    imageSrc="/img/red.png"
                     captionText="Challenge"
                     containerWidth="300px"
                     containerHeight="300px"
@@ -173,13 +173,13 @@ return (
                     scaleOnHover={1.1}
                     displayOverlayContent={true}
                     overlayContent={
-                        <p className="tilted-card-text">
+                        <p className= {styles.tiltedCardText}>
                           Balancing Experimentation with Clarity
                         </p>
                     }      
                     />
                     <TiltedCard
-                    imageSrc="/img/blue.png"
+                    imageSrc="/img/red.png"
                     captionText="Challenge"
                     containerWidth="300px"
                     containerHeight="300px"
@@ -188,7 +188,7 @@ return (
                     scaleOnHover={1.1}
                     displayOverlayContent={true}
                     overlayContent={
-                        <p className="tilted-card-text">
+                        <p className= {styles.tiltedCardText}>
                           Technical & Performance Constraints Across Applications
                         </p>
                     }      

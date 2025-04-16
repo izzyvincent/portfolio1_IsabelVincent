@@ -2,7 +2,5 @@
 const nextConfig = {};
 
 export default {
-    experimental: {
-      appDir: false,
-    },
+
   };

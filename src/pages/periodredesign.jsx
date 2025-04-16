@@ -106,7 +106,7 @@ return (
                     scaleOnHover={1.1}
                     displayOverlayContent={true}
                     overlayContent={
-                        <p className="tilted-card-text">
+                        <p className= {styles.tiltedCardText}>
                           Streamline navigation
                         </p>
                     }                    
@@ -121,7 +121,7 @@ return (
                     scaleOnHover={1.1}
                     displayOverlayContent={true}
                     overlayContent={
-                        <p className="tilted-card-text">
+                        <p className= {styles.tiltedCardText}>
                           Enhance visual clarity
                         </p>
                     }      
@@ -136,7 +136,7 @@ return (
                     scaleOnHover={1.1}
                     displayOverlayContent={true}
                     overlayContent={
-                        <p className="tilted-card-text">
+                        <p className= {styles.tiltedCardText}>
                           Iterate with user feedback
                         </p>
                     }      
@@ -154,7 +154,7 @@ return (
                     scaleOnHover={1.1}
                     displayOverlayContent={true}
                     overlayContent={
-                        <p className="tilted-card-text">
+                        <p className= {styles.tiltedCardText}>
                           Balance inclusivity with minimalism
                         </p>
                     }      
@@ -169,7 +169,7 @@ return (
                     scaleOnHover={1.1}
                     displayOverlayContent={true}
                     overlayContent={
-                        <p className="tilted-card-text">
+                        <p className= {styles.tiltedCardText}>
                           Integrate robust accessibility
                         </p>
                     }
@@ -184,7 +184,7 @@ return (
                     scaleOnHover={1.1}
                     displayOverlayContent={true}
                     overlayContent={
-                        <p className="tilted-card-text">
+                        <p className= {styles.tiltedCardText}>
                           Maintain performance with dynamic animations
                         </p>
                     }      
