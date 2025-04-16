@@ -1,12 +1,14 @@
 import { useEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { FiMail, FiInstagram, FiLinkedin } from "react-icons/fi";
+// import { FiInstagram, FiLinkedin } from "react-icons/fi";
 import Layout from '../components/Layout';
 import styles from '../styles/Home.module.css';
 import HeroImageSequence from '../components/HeroImageSequence';
 import TypewriterTitle from '../components/TyperwriterTitle';
-import TypewriterSkills from '../components/TypewriterSkills';
+// import TypewriterSkills from '../components/TypewriterSkills';
+import VerticalScroll from '../components/VerticalScroll';
+import SEO from '../components/SEO';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -54,6 +56,13 @@ export default function Home() {
   
   return (
     <Layout>
+      <SEO
+        title="Isabel Vincent Portfolio | Multidisciplinary Designer"
+        description="Welcome to the portfolio of Isabel Vincent, a multidisciplinary designer with expertise in UI/UX, Motion Graphics, and Front-End Development. Explore featured projects and learn more about her creative journey."
+        keywords="portfolio, design, UI/UX, motion graphics, front-end, Isabel Vincent"
+        image="/img/LinkedinPhoto.png"
+        url="https://isabelruthvincent.ca"
+      />
       <section className={styles.videoSection}>
         <HeroImageSequence />
       </section>
@@ -70,58 +79,59 @@ export default function Home() {
           <div className={styles.projectCard}>
             <div className={styles.cardImageWrapper}>
               <img 
-                src='/img/placeholder-image1.jpeg'
+                src='/img/periodredesignhome.png'
                 alt='Project One' // edit later
                 className={styles.cardImage}
               />
             </div>
             <div className={styles.cardContent}>
-              <h2 className={styles.projectTitle}>Project 1</h2>
-              <span className={styles.projectType}>UI/UX</span>
+              <h2 className={styles.projectTitle}>Period App Redesign</h2>
+              <span className={styles.projectType}>UI/UX Design</span>
               <p className={styles.projectOverview}>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi voluptas a voluptate, qui nemo iure eveniet eos! Alias eveniet, magnam ipsum praesentium, cumque exercitationem vero quaerat labore omnis quas doloremque.
+                This redesign of the Flo period tracker reimagines the app for greater accessibility and inclusivity, with a focus on users who are visually impaired or do not identify as women. Built in Figma with a detailed user persona and empathy mapping process, the new interface simplifies navigation, and reduces clutter. The result is a more thoughtful, user-centered tool that respects a broader spectrum of menstruating individuals.
               </p>
-              <a href='#project1' className={styles.viewMoreBtn}>View More</a>
+              <a href='/periodredesign' className={styles.viewMoreBtn}>View Details</a>
             </div>
           </div>
           <div className={styles.projectCard}>
             <div className={styles.cardImageWrapper}>
               <img 
-                src='/img/placeholder-image2.jpeg'
+                src='/img/shanghaifollieshome.png'
                 alt='Project Two' // edit later
                 className={styles.cardImage}
               />
             </div>
             <div className={styles.cardContent}>
-              <h2 className={styles.projectTitle}>Project 2</h2>
-              <span className={styles.projectType}>UI/UX</span>
+              <h2 className={styles.projectTitle}>Shanghai Follies Pitch</h2>
+              <span className={styles.projectType}>UI/UX Design | Front-End Development |  Motion Graphics</span>
               <p className={styles.projectOverview}>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi voluptas a voluptate, qui nemo iure eveniet eos! Alias eveniet, magnam ipsum praesentium, cumque exercitationem vero quaerat labore omnis quas doloremque.
+                An interactive one-page pitch site for the Shanghai Follies film, combining design, storytelling, and front-end development. Built from scratch with HTML, CSS, and JavaScript, the site features a hero video, responsive layout, dynamic character bios, and PDF pitch downloads. This project showcases a strong understanding of both design systems and technical execution across devices.
               </p>
-              <a href='#project2' className={styles.viewMoreBtn}>View More</a>
+              <a href='/shanghaifollies' className={styles.viewMoreBtn}>View Details</a>
             </div>
           </div>
           <div className={styles.projectCard}>
             <div className={styles.cardImageWrapper}>
               <img 
-                src='/img/placeholder-image3.jpeg'
+                src='/img/fizzihome.png'
                 alt='Project Three' // edit later
                 className={styles.cardImage}
               />
             </div>
             <div className={styles.cardContent}>
-              <h2 className={styles.projectTitle}>Project 3</h2>
-              <span className={styles.projectType}>UI/UX</span>
+              <h2 className={styles.projectTitle}>Fizzi Sparkling Water Commercial</h2>
+              <span className={styles.projectType}>Motion Graphics, Graphic Design</span>
               <p className={styles.projectOverview}>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi voluptas a voluptate, qui nemo iure eveniet eos! Alias eveniet, magnam ipsum praesentium, cumque exercitationem vero quaerat labore omnis quas doloremque.
+                A motion commercial concept for a fictional sparkling water brand, created using Adobe After Effects, Dimension, and Audition. The animation blends layered compositions, 3D assets, and fluid transitions to bring a vibrant summer mood to life. With a focus on branding consistency and creative experimentation, this was a deep dive into visual storytelling through motion.
               </p>
-              <a href='#project3' className={styles.viewMoreBtn}>View More</a>
+              <a href='/fizzi' className={styles.viewMoreBtn}>View Details</a>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="vertical-sections">
+      <VerticalScroll />
+      {/* <section className="vertical-sections">
         <div className="panel about-panel">
           <div className={styles.aboutContainer}>
             <div className={styles.aboutImageWrapper}>
@@ -134,9 +144,7 @@ export default function Home() {
             <div className={styles.aboutContent}>
               <h2 className={styles.aboutTitle}>Who am I?</h2>
               <p className={styles.aboutParagraph}>
-                Hi there! I'm Isabel Vincent, a designer who loves creating 
-                user-friendly experiences, capturing moments with photography,
-                and leading teams with effective project management.
+              I’m Izzy, a multidisciplinary designer who values clarity, creativity, and connection. I approach each project with intention and adaptability, always focused on creating work that feels human.
               </p>
               <div className={styles.aboutSkills}>
                 <strong>Skills:</strong> <TypewriterSkills />
@@ -156,7 +164,9 @@ export default function Home() {
               </p>
 
               <div className={styles.contactIcons}>
-                <h3>izzyvincentdesign@gmail.com</h3>
+                <a href='#' className={styles.emailBtn}>
+                  <h3 style={{fontWeight: 500}}>izzyvincentdesign@gmail.com</h3>
+                </a>
                 <a href="https://instagram.com/yourprofile" target="_blank" rel="noreferrer">
                   <FiInstagram className={styles.contactIcon}/>
                 </a>
@@ -188,7 +198,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
     </Layout>
   );
 }

@@ -12,11 +12,13 @@ export default function Header() {
   return (
     <header className={styles.header}>
       <div className={styles.logoContainer}>
-        <img 
-          src="/img/secondary-logo.png"
-          alt="Isabel Vincent Secondary Logo"
-          className={styles.logoImage}
-        />
+        <Link href="/">
+          <img 
+            src="/img/secondary-logo.png"
+            alt="Isabel Vincent Secondary Logo"
+            className={styles.logoImage}
+          />
+        </Link>
         <span className={styles.logoText}>Isabel Vincent</span>
       </div>
       <button className={styles.menuButton} onClick={toggleMenu}>

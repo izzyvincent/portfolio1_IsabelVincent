@@ -1,12 +1,9 @@
-
 html, body {
   margin: 0;
   padding: 0;
   background-color: black;
   color: white;
 }
-
-/* === Mobile-first (default) styles === */
 
 .videoSection {
   position: relative;
@@ -83,27 +80,30 @@ html, body {
   padding: 1rem;
   width: 300vw; 
   margin-right: 3rem;
+  justify-content: center;
+  align-items: center;
 }
 
 .projectCard {
-  min-width: 100vw; 
-  height: 70vh;    
+  min-width: 90vw; 
+  height: 73vh;    
   background: #8ABDE6;
-  margin-bottom: 2rem;
   border-radius: 8px;
   color: white;
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  padding-left: 2rem;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
 }
 
 .cardImageWrapper {
   width: 100%;
+  height: 80%;
   display: flex;
   align-items: center;
-  padding-top: 2rem;
-  margin-left: .65rem;
+  justify-content: center;
 }
 
 .cardImage {
@@ -120,6 +120,7 @@ html, body {
   gap: 0.5rem;
   padding-top: .5rem;
   margin-left: .65rem;
+  justify-content: center;
 }
 
 .projectTitle {
@@ -130,7 +131,7 @@ html, body {
 
 .projectType {
   font-size: 1rem;
-  color: #ccc;
+  color: #DF2728;
 }
 
 .projectOverview {
@@ -151,15 +152,13 @@ html, body {
 }
 
 .viewMoreBtn:hover {
-  background: linear-gradient(to right, #DF2728, #DE9D26 );
+  background: #436a89;
   color: white;
   transition: 0.2s ease-in-out;
   transform: scale(1.02);
 }
 
 .viewMoreBtn:active {
-  background: linear-gradient(to right, #DF2728, #DE9D26 );
-  color: white;
   transform: scale(.97);
 }
 
@@ -208,7 +207,7 @@ html, body {
 }
 .contact-panel {
   height: auto; 
-  display: block; 
+  display: flex;
   padding: 2rem;
   background: #DE9D26; 
   color: #fff;
@@ -276,16 +275,17 @@ html, body {
   width: 100%;
   height: auto;
   align-items: center;
+  padding: 2rem;
 }
 
 .contactInfo {
   align-items: center;
+  width: 100%;
 }
 
 .contactFormWrapper {
-  background: #DE9D26; 
+  padding-top: 2rem;
   border-radius: 8px;
-  padding: 2rem;
   width: 100%; 
   color: #fff; 
 }
@@ -299,7 +299,7 @@ html, body {
 .contactForm input,
 .contactForm textarea {
   background: #ffffff;
-  border: 1px solid #b7821f; 
+  border: 1px solid #6393ba; 
   color: #000;
   font-size: 0.95rem;
   padding: 0.75rem 1rem;
@@ -329,18 +329,29 @@ html, body {
 .submitBtn:hover {
   transform: scale(1.02);
   color: white;
-  background: #DF2728;
+  background: #436a89;
 }
 
 .submitBtn:active {
   transform: scale(0.98);
 }
 
+.emailBtn {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+}
+
+.emailBtn:hover {
+  color: #DF2728;
+  transform: scale(1.05);
+  transition: transform 0.2s ease-in-out;
+}
+
 .contactIcons {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   width: 50%;
-  justify-content: space-between;
   gap: 2rem;
   margin-top: 3rem;
 }
@@ -354,11 +365,9 @@ html, body {
 .contactIcon:hover {
   transform: scale(1.1);
   color: #DF2728;
+  /* text-shadow: #000 2px 8px; */
 }
 
-/* === Media Queries for bigger screens === */
-
-/* Tablet breakpoint (e.g. 768px) */
 @media (min-width: 768px) {
   .videoSection {
     height: 120vh;
@@ -432,9 +441,13 @@ html, body {
   .contactTitle {
     font-size: 2rem;
   }
+  .contactIcons {
+    width: 100%;
+    flex-direction: column;
+  }
 }
 
-/* Desktop breakpoint (e.g. 1024px) */
+
 @media (min-width: 1024px) {
   .title {
     font-size: 4rem; 
@@ -443,11 +456,11 @@ html, body {
     font-size: 2.5rem;
   }
   .projectCard {
-    height: 70vh; /* slightly taller on desktop */
+    height: 70vh; 
     gap: 3rem;
   }
   .contactContainer {
-    gap: .5rem;
+    gap: 2rem;
   }
   .contactInfo {
     margin-left: 2rem;
@@ -455,9 +468,11 @@ html, body {
   .typedContainer {
     font-size: 2rem;
   }
+  .contactIcons {
+    flex-direction: row;
+  }
 }
 
-/* Larger desktops or 1440px */
 @media (min-width: 1440px) {
   .title {
     font-size: 5rem;

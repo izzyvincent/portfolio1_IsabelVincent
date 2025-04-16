@@ -2,7 +2,7 @@ import Header from './Header';
 import Footer from './Footer';
 import styles from '../styles/Layout.module.css';
 import { useEffect } from 'react';
-import { initSmoothScroll } from '../lib/smoothscroll'; // maybe change, for if I want smooth scroll
+import { initSmoothScroll } from '../library/smoothscroll'; // maybe change, for if I want smooth scroll
 
 export default function Layout({ children }) {
   useEffect(() => {

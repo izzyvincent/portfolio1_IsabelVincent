@@ -5,18 +5,28 @@
 
 .section {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   gap: 2rem;
   padding: 2rem;
   align-items: center;
-  margin-top: 3rem;
+  justify-content: center;
 }
 
-.photo {
+.secondSection {
+  display: flex;
+  padding: 0 2rem;
+}
+
+.carouselWrapper {
   width: 100%;
-  max-width: 400px;
-  border-radius: 8px;
-  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+.carouselImage {
+  width: 100%;
+  height: auto;
+  object-fit: cover; 
+  border-radius: 8px; 
 }
 
 .textBlock {
@@ -32,22 +42,116 @@
   line-height: 1.6;
 }
 
+.secondParagraph {
+  line-height: 1.6;
+}
+
 .videoSection {
   position: relative;
   width: 100%;
   height: 100vh;
   overflow: hidden;
-  margin-bottom: 2rem;
 }
 
 .parallaxVideo {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: 80%;
+  object-fit: contain;
 }
 
 .contentSection {
   max-width: 800px;
   margin: 0 auto;
   padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+.lastParagraph {
+  line-height: 1.6;
+  margin-top: 4rem;
+  margin-bottom: 8rem;
+}
+
+.scrollText {
+  width: 100%;
+}
+
+.parallax {
+  position: relative;
+  overflow: hidden;
+}
+
+.scroller {
+  display: flex;
+  white-space: nowrap;
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 4rem;
+  font-weight: bold;
+  letter-spacing: -0.02em;
+  filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.1));
+}
+
+.scroller span {
+  flex-shrink: 0;
+}
+
+@media (min-width: 768px) {
+  .section {
+    flex-direction: row; 
+    gap: 3rem;
+    padding: 3rem;
+  }
+  .carouselWrapper {
+    flex: 0 0 50%;
+    margin-bottom: 0; 
+  }
+  .textBlock {
+    flex: 1;
+  }
+  .scroller {
+    font-size: 5rem;
+    line-height: 5rem;
+  }
+  .secondSection {
+    padding: 3rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .carouselWrapper {
+    flex: 0 60%; 
+    justify-content: center;
+    align-items: center;
+  }
+  .secondSection {
+    padding-top: 0;
+  }
+  .text {
+    font-size: 1.1rem;
+  }
+  .secondParagraph {
+    font-size: 1.1rem;
+  }
+  .lastParagraph {
+    font-size: 1.1rem;
+  }
+  .title {
+    font-size: 2.1rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  .text {
+    font-size: 1.2rem;
+  }
+  .secondParagraph {
+    font-size: 1.2rem;
+  }
+  .lastParagraph {
+    font-size: 1.2rem;
+  }
+  .title {
+    font-size: 2.5rem;
+  }
 }

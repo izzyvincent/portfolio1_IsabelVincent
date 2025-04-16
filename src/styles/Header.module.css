@@ -4,7 +4,7 @@
   align-items: center;
   background: #000000;
   color: #fff;
-  position: absolute;
+  position: relative;
   width: 100%;
   height: 10rem;
   top: 0;
@@ -49,28 +49,51 @@
   color: #fff;
   text-decoration: none;
   font-size: 1.25rem;
+  align-content: center;
+}
+
+.nav a:hover {
+  font-weight: 600;
+  color: #DF2728;
+  transition: transform 0.3s ease-in-out;
+  transform: scale(1.1);
+}
+
+.nav a:active {
+  transform: scale(1.05);
 }
 
 .open {
   display: block;
 }
 
-/* Responsive */
 @media (max-width: 768px) {
   .menuButton {
     display: block;
+    margin-right: 1rem;
   }
   .nav {
     display: none;
     flex-direction: column;
-    background: #222;
+    background: #000000;
     position: absolute;
-    top: 60px;
-    right: 0;
-    width: 200px;
-    padding: 1rem;
+    top: 0;
+    left: 0;
+    width: 70vw;
+    padding-left: 3rem;
+    padding-top: 5rem;
   }
   .nav.open {
     display: flex;
+  }
+  .nav a:hover {
+    font-weight: 600;
+    color: #DF2728;
+    transition: transform 0.3s ease-in-out;
+    transform: scale(1.03);
+  }
+  
+  .nav a:active {
+    transform: scale(1.02);
   }
 }

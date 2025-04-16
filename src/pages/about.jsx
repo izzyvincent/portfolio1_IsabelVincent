@@ -1,12 +1,39 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Layout from '../components/Layout';
+import ScrollingText from '../components/ScrollingText';
 import styles from '../styles/About.module.css';
+import SEO from '../components/SEO';
 
 gsap.registerPlugin(ScrollTrigger);
 
 export default function About() {
+  const carouselImages = [
+    "/img/carousel1.jpg",
+    "/img/carousel2.jpg",
+    "/img/carousel3.jpg",
+    "/img/carousel4.jpg",
+    "/img/carousel5.jpg",
+    "/img/carousel6.jpg",
+    "/img/carousel7.jpg",
+    "/img/carousel8.jpg",
+    "/img/carousel9.jpg",
+    "/img/carousel10.jpg",
+    "/img/carousel11.jpg",
+    "/img/carousel12.png",
+    "/img/carousel13.jpg",
+  ];
+  
+  const [carouselIndex, setCarouselIndex] = useState(0);
+  
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCarouselIndex((prev) => (prev + 1) % carouselImages.length);
+    }, 4000); 
+    return () => clearInterval(interval);
+  }, []);
+
   const textRefs = useRef([]);
   textRefs.current = [];
 
@@ -54,27 +81,38 @@ export default function About() {
 
   return (
     <Layout>
+      <SEO
+        title="About Isabel Vincent | Designer & Storyteller"
+        description="Learn about Isabel Vincent's creative journey, her background in art, design and sports, as well as her passion for inclusive, user-focused design."
+        keywords="about, biography, designer, art, cheerleading, cheer, inclusive design, Isabel Vincent"
+        image="/img/carousel1.jpg" 
+        url="https://isabelruthvincent.ca/about"
+      />
       <div className={styles.aboutContainer}>
         <section className={styles.section}>
-          <img
-            src="/img/LinkedinPhoto.png"
-            alt="Isabel Vincent"
-            className={styles.photo}
-          />
+          <div className={styles.carouselWrapper}>
+            <img
+              src={carouselImages[carouselIndex]}
+              alt="Izzy's rotating images"
+              className={styles.carouselImage}
+            />
+          </div>
           <div className={styles.textBlock}>
-            <h2 ref={addTextRef} className={styles.title}>Oh! Didn't see ya there!</h2>
+            <h2 ref={addTextRef} className={styles.title}>A Little Bit About Me</h2>
             <p ref={addTextRef} className={styles.text}>
-            I'm Izzy, a New Media design student based in Vancouver at BCIT. A little bit about me, I've been an athlete my whole life, starting with competitive cheerleading at age 8 and continuing until I turned 20. Right when I hung up my cheer shoes, I dove into coaching, and I've been passionate about it ever since. Today, I coach two elite teams that travel, fuelling my love for both sports and adventure. <br/><br/>
-
-            When I'm not coaching, you'll probably find me strumming my guitar or planning my next trip. I've already visited 23 countries and am always eager to explore more. I even dream of eventually settling in Europe, close to where my family is. 
+              Yes, my name is Isabel, but I'm only called that when something is seriously wrong, so just Izzy is great. Art and design have been a part of my life for as long as I can remember. My mom was a producer at an animation studio and brought me to work almost every day. Some of the first movies and shows I watched were from Fleischer Studios and early Disney. You could say it runs in the family, as my uncle is also an animator specializing in the Fleischer style. <br/><br/>
             </p>
           </div>
         </section>
-
+        <section className={styles.secondSection}>
+          <p ref={addTextRef} className={styles.secondParagraph}>          
+            While my love for animation never faded, I found new passions along the way. With half my family living in Europe, travel became a source of comfort and connection. Twenty-four countries later, and I'm still not done. Being immersed in different cultures taught me the importance of inclusivity and the value of building meaningful relationships with people from all walks of life. It gave me a roll with the punches mentality that has helped me adapt quickly in unfamiliar situations, whether abroad, in class, or on a team. That global curiosity even inspired me to study Anthropology at UBC. During the throes of exam season and the semi-lockdown of 2021, I picked up the ukulele and quickly transitioned to guitar. I used to think my sister had taken all the musical talent since she is a successful singer and composer, but it turns out I got just enough to enjoy it as a hobby. I probably avoided music earlier because I kept interrupting my piano lessons to play with fitness weights in the corner of the studio. Ironically, that moment ended up being one of the sparks that led me to cheerleading.
+          </p>
+        </section>
         <section className={styles.videoSection}>
           <video
             ref={videoRef}
-            src="/mp4/placeholder-coaching.mov"
+            src='/mp4/about-video.mp4'
             autoPlay
             muted
             loop
@@ -84,18 +122,26 @@ export default function About() {
         </section>
 
         <section className={styles.contentSection}>
-          <h2 ref={addTextRef} className={styles.title}>Second Blurb</h2>
+          <h2 ref={addTextRef} className={styles.title}>Cheerleading</h2>
           <p ref={addTextRef} className={styles.text}>
-          Alongside my athletic pursuits, I'm also passionate about design. I'm currently enrolled in the BCIT New Medium Web Development program, where I'm learning everything from coding to the creative side of web design. Over the past term, I've discovered a real love for motion graphics, UI/UX, and graphic design through various projects, and I know this is where my true passion lies. <br/><br/>
-
-          Overall, I blend my love for sports, travel, and design into everything I do, always striving to bring creativity and enthusiasm to both the field and the digital space.
+          I started cheer at age 9 and never looked back. I've had the privilege of representing Canada and my club at the World Championships four times. After 13 years as an athlete, I transitioned to coaching and fell in love with the sport all over again. Leading the next generation of athletes has been unimaginably rewarding, and all I hope is to give them the guidance and compassion that shaped me when I was their age.
           </p>
 
-          <h2 ref={addTextRef} className={styles.title}>Why Design?</h2>
+          <h2 ref={addTextRef} className={styles.title}>Back to Design Please?</h2>
           <p ref={addTextRef} className={styles.text}>
-          I've always been really drawn to design, especially in the digital space. Ever since I got my own laptop at around 14 or 15, I was tinkering with website builders, and different design programs just for fun. I remember in grade 12, after handing in a geography assignment, my teacher didn't focus on the content at all. Instead, they pointed out how impressive the website looked and suggested I consider a career in design. That moment really stuck with me and sparked an early passion for creating visually engaging work. <br/><br/>
+          So, a bit turned into a lot, huh? What does any of that have to do with design? Honestly, everything. Those experiences, studies, and travels are exactly what led me to take design seriously. <br/><br/>
 
-          Even while pursuing a degree in anthropology at UBC, a field I remain passionate about, design was never far from my mind. It was the creative outlet I enjoyed and one I knew I could eventually turn into a career. This blend of early inspiration and continuous creative exploration has led me to embrace design as a central part of my professional journey in web development, where I now fuse technology with the art of visual storytelling every day.
+          Throughout school, I was always the PowerPoint person. It sounds silly, but when you're more passionate about making slides than the actual material, it makes you stop and think. Am I even in the right field? I created a website for a geography assignment and got endless praise for the design and layout, but barely a word about the content. I helped friends with websites and social media for their businesses but never thought of it as a career. <br/><br/>
+          </p>
+        </section>
+          <ScrollingText
+            texts={['Inclusivity', 'Connection', 'Curiosity']} 
+            velocity= '100'
+            className="scrollText"
+          />
+        <section className={styles.contentSection}>
+          <p ref={addTextRef} className={styles.lastParagraph}>
+          Still, my curiosity pushed me forward. It's never let me down. Not when I spent three months solo traveling. Not when I coached over 40 athletes. Not when I taught myself music. So I gave design a shot. With an eye for detail, a people-first mindset, and core values of inclusivity, connection, and curiosity shaped through those experiences, and formal training from BCIT's New Media and Web Development program, I'm confident I'll hit the ground running as I break into the industry.
           </p>
         </section>
       </div>
